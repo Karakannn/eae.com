@@ -7,7 +7,7 @@ import classNames from 'classnames'
 export default function Products() {
 
     const productMenus = [
-        { name: 'Busbar Sistemleri', icon: 'search', supportingText: 'The latest industry news, updates and info.' },
+        { name: 'Busbar Sistemleri', icon: 'icon-busbar', supportingText: 'The latest industry news, updates and info.' },
         { name: 'Kablo Kanalları', icon: 'search', supportingText: 'The latest industry news, updates and info.' },
         { name: 'Trolley Busbar Sistemleri', icon: 'search', supportingText: 'The latest industry news, updates and info.' },
         { name: 'Askı Sistemleri', icon: 'search', supportingText: 'The latest industry news, updates and info.' },
@@ -15,16 +15,16 @@ export default function Products() {
     ]
 
     return (
-        <div className="flex bg-white shadow-lg ring-1 ring-gray-900/5">
+        <div className="flex bg-gray-50  shadow-lg ring-1 ring-gray-900/5">
             <Tab.Group>
-                <Tab.List className="space-x-1 rounded-md p-1">
+                <Tab.List className="space-x-1 rounded-md p-1 border-r-2 p-6">
                     {productMenus.map((productMenu, index) => (
                         <Tab
                             key={index}
 
                             className={({ selected }) =>
                                 classNames(
-                                    ' w-full rounded-md py-2.5', {
+                                    ' w-auto rounded-md p-3 flex flex-col', {
                                     'bg-primary-600 transition-colors': selected
                                 })
                             }>
@@ -33,7 +33,7 @@ export default function Products() {
 
 
                                 <div className='flex gap-4 items-center border-none'>
-                                    <Icon class={selected ? 'stroke-white' : 'stroke-primary-600'} id='icon-busbar' width={72} height={40}/>
+                                    <Icon class={selected ? 'stroke-white' : 'stroke-primary-600'} id='icon-busbar' width={72} height={40} />
 
                                     <div className='text-left flex flex-col gap-1'>
                                         <h5 className={classNames(
@@ -56,7 +56,7 @@ export default function Products() {
                         </Tab>
                     ))}
                 </Tab.List>
-                <Tab.Panels className="mt-2 flex-1">
+                <Tab.Panels className="mt-2 flex-1 bg-white">
                     sa
                 </Tab.Panels>
             </Tab.Group>
