@@ -16,7 +16,7 @@ export default function ListBox(props: ListBoxProps) {
         <div >
             <Listbox value={selected} onChange={setSelected}>
                 <div className="relative">
-                    <Listbox.Button className="relative flex items-center gap-1  rounded-lg bg-white p-2 px-[10px] border border-primary-600 text-left shadow-md sm:text-sm">
+                    <Listbox.Button className="relative flex items-center gap-1  rounded-lg bg-white p-2 px-[10px] border border-primary-600 text-left sm:text-sm">
                         <span className="text-primary-600 text-md font-semibold">{selected.name}</span>
                         <Icon width={24} height={24} class='stroke-primary-600' id='chevron-down' />
                     </Listbox.Button>

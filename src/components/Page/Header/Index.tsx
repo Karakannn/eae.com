@@ -3,7 +3,10 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import logo from '@assets/images/eae-elektrik-logo.jpg';
 import Icon from '@components//UI/Icon/Icon';
 import DropdownMenu from '@components//UI/DropdownMenu/DropdownMenu';
-import Products from './Products';
+import Products from './Products/Products';
+import Solutions from './Solutions';
+import NavItem from '@components//UI/NavItem';
+import CoorporateHeader from './Coorporate';
 
 const products = [
     { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: 'search' },
@@ -15,6 +18,35 @@ const products = [
 const callsToAction = [
     { name: 'Watch demo', href: '#', icon: 'search' },
     { name: 'Contact sales', href: '#', icon: 'search' },
+]
+
+
+const designTools = [
+    { name: 'BIM Yapı Bilgi Modellemesi', description: 'Find the best solution for you.', href: '#' },
+    { name: '3D Tesis Tasarımı', description: 'Learn how our customers are making big changes.', href: '#' },
+    { name: 'İç Tesisat Çözümleri Uygulama', description: "Get up and running on new features and techniques.", href: '#' },
+    { name: 'Küçük Atölye Çözümleri', description: 'Find the best solution for you.', href: '#' },
+]
+
+const downloadCenter = [
+    { name: 'Kataloglar ve Broşürler', href: '#' },
+    { name: 'BIM Kütüphaneleri', href: '#' },
+    { name: 'El Kitapları & Montaj Kılavuzları', href: '#' },
+]
+
+
+const career = [
+    { name: 'İnsan Kaynakları Politikamız', href: '#' },
+    { name: 'Değerlerimiz', href: '#' },
+    { name: 'İş Etiği Kurallarımız', href: '#' },
+    { name: 'Ücret ve Yan Haklar Yönetimimiz', href: '#' },
+    { name: 'İşe Alım Süreci', href: '#' },
+]
+
+const contact = [
+    { name: 'Bayi ve Yetkili Satıcılarımız', href: '#' },
+    { name: 'Yurtdışı Şirketlerimiz', href: '#' },
+    { name: 'İletişim Bilgileri', href: '#' },
 ]
 
 const languages = [
@@ -65,6 +97,8 @@ export default function Header() {
                     }
 
                     <Popover.Group className="hidden lg:flex lg:gap-x-8">
+
+                        {/* Products */}
                         <Popover>
                             <Popover.Button className="flex items-center gap-x-1 text-sm font-medium leading-6 text-gray-900">
                                 Ürünler
@@ -80,44 +114,164 @@ export default function Header() {
                                 leaveFrom="opacity-100 translate-y-0"
                                 leaveTo="opacity-0 translate-y-1"
                             >
-                                <Popover.Panel className="absolute w-full left-0 top-full z-10 mt-3 rounded-md lg:px-8">
+                                <Popover.Panel className="absolute w-full left-0 top-full z-10 mt-1 rounded-md lg:px-8">
                                     <Products />
                                 </Popover.Panel>
                             </Transition>
                         </Popover>
 
-                        <a href="#" className="flex gap-x-1 items-center text-sm font-medium leading-6 text-gray-900">
-                            Çözümler
-                            <Icon width={16} height={16} class='stroke-gray-600' id='chevron-down' />
 
-                        </a>
-                        <a href="#" className="flex gap-x-1 items-center text-sm font-medium leading-6 text-gray-900">
-                            Tasarım Araçları
-                            <Icon width={16} height={16} class='stroke-gray-600' id='chevron-down' />
-                        </a>
+                        {/* Solutions */}
+                        <Popover>
+                            <Popover.Button className="flex items-center gap-x-1 text-sm font-medium leading-6 text-gray-900">
+                                Çözümler
+                                <Icon width={16} height={16} class='stroke-gray-600' id='chevron-down' />
+                            </Popover.Button>
+
+                            <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-200"
+                                enterFrom="opacity-0 translate-y-1"
+                                enterTo="opacity-100 translate-y-0"
+                                leave="transition ease-in duration-150"
+                                leaveFrom="opacity-100 translate-y-0"
+                                leaveTo="opacity-0 translate-y-1"
+                            >
+                                <Popover.Panel className="absolute w-full left-0 top-full z-10 mt-1 rounded-md lg:px-8">
+                                    <Solutions />
+                                </Popover.Panel>
+                            </Transition>
+                        </Popover>
+
+
+                        {/* Tasarım Araçları */}
+                        <Popover className='relative'>
+                            <Popover.Button className="flex  items-center gap-x-1 text-sm font-medium leading-6 text-gray-900">
+                                Tasarım Araçları
+                                <Icon width={16} height={16} class='stroke-gray-600' id='chevron-down' />
+                            </Popover.Button>
+
+                            <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-200"
+                                enterFrom="opacity-0 translate-y-1"
+                                enterTo="opacity-100 translate-y-0"
+                                leave="transition ease-in duration-150"
+                                leaveFrom="opacity-100 translate-y-0"
+                                leaveTo="opacity-0 translate-y-1"
+                            >
+                                <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                                    <div className="p-3 rounded-xl border border-gray-200 bg-white text-sm shadow-lg">
+                                        {designTools.map((item) => <NavItem title={item.name} supportingText={item.description} />)}
+                                    </div>
+                                </Popover.Panel>
+                            </Transition>
+                        </Popover>
+
+
                         <a href="#" className=" text-sm font-medium leading-6 text-gray-900">
                             SSS
                         </a>
-                        <a href="#" className="flex gap-x-1 items-center text-sm font-medium leading-6 text-gray-900">
-                            Kariyer
-                            <Icon width={16} height={16} class='stroke-gray-600' id='chevron-down' />
 
-                        </a>
-                        <a href="#" className="flex gap-x-1 items-center text-sm font-medium leading-6 text-gray-900">
-                            Kurumsal
-                            <Icon width={16} height={16} class='stroke-gray-600' id='chevron-down' />
+                        {/* Career */}
+                        <Popover className='relative'>
+                            <Popover.Button className="flex items-center gap-x-1 text-sm font-medium leading-6 text-gray-900">
+                                Kariyer
+                                <Icon width={16} height={16} class='stroke-gray-600' id='chevron-down' />
+                            </Popover.Button>
 
-                        </a>
-                        <a href="#" className="flex gap-x-1 items-center text-sm font-medium leading-6 text-gray-900">
-                            İndirme Merkezi
-                            <Icon width={16} height={16} class='stroke-gray-600' id='chevron-down' />
+                            <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-200"
+                                enterFrom="opacity-0 translate-y-1"
+                                enterTo="opacity-100 translate-y-0"
+                                leave="transition ease-in duration-150"
+                                leaveFrom="opacity-100 translate-y-0"
+                                leaveTo="opacity-0 translate-y-1"
+                            >
+                                <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                                    <div className="p-3 rounded-xl border border-gray-200 bg-white text-sm shadow-lg">
+                                        {career.map((item) => <NavItem title={item.name} />)}
+                                    </div>
+                                </Popover.Panel>
+                            </Transition>
+                        </Popover>
 
-                        </a>
-                        <a href="#" className="flex gap-x-1 items-center text-sm font-medium leading-6 text-gray-900">
-                            İletişim
-                            <Icon width={16} height={16} class='stroke-gray-600' id='chevron-down' />
 
-                        </a>
+                        {/* Coorporate */}
+                        <Popover>
+                            <Popover.Button className="flex items-center gap-x-1 text-sm font-medium leading-6 text-gray-900">
+                                Kurumsal
+                                <Icon width={16} height={16} class='stroke-gray-600' id='chevron-down' />
+                            </Popover.Button>
+
+                            <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-200"
+                                enterFrom="opacity-0 translate-y-1"
+                                enterTo="opacity-100 translate-y-0"
+                                leave="transition ease-in duration-150"
+                                leaveFrom="opacity-100 translate-y-0"
+                                leaveTo="opacity-0 translate-y-1"
+                            >
+                                <Popover.Panel className="absolute w-full left-0 top-full z-10 mt-1 rounded-md lg:px-8">
+                                    <CoorporateHeader />
+                                </Popover.Panel>
+                            </Transition>
+                        </Popover>
+
+                        {/* Download Center */}
+                        <Popover className='relative'>
+                            <Popover.Button className="flex items-center gap-x-1 text-sm font-medium leading-6 text-gray-900">
+                                İndirme Merkezi
+                                <Icon width={16} height={16} class='stroke-gray-600' id='chevron-down' />
+                            </Popover.Button>
+
+                            <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-200"
+                                enterFrom="opacity-0 translate-y-1"
+                                enterTo="opacity-100 translate-y-0"
+                                leave="transition ease-in duration-150"
+                                leaveFrom="opacity-100 translate-y-0"
+                                leaveTo="opacity-0 translate-y-1"
+                            >
+                                <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                                    <div className="p-3 rounded-xl border border-gray-200 bg-white text-sm shadow-lg">
+                                        {downloadCenter.map((item) => <NavItem title={item.name} />)}
+                                    </div>
+
+                                </Popover.Panel>
+                            </Transition>
+                        </Popover>
+
+
+
+                        {/* Contact */}
+                        <Popover className='relative'>
+                            <Popover.Button className="flex  items-center gap-x-1 text-sm font-medium leading-6 text-gray-900">
+                                İletişim
+                                <Icon width={16} height={16} class='stroke-gray-600' id='chevron-down' />
+                            </Popover.Button>
+
+                            <Transition
+                                as={Fragment}
+                                enter="transition ease-out duration-200"
+                                enterFrom="opacity-0 translate-y-1"
+                                enterTo="opacity-100 translate-y-0"
+                                leave="transition ease-in duration-150"
+                                leaveFrom="opacity-100 translate-y-0"
+                                leaveTo="opacity-0 translate-y-1"
+                            >
+                                <Popover.Panel className="absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4">
+                                    <div className="p-3 rounded-xl border border-gray-200 bg-white text-sm shadow-lg">
+                                        {contact.map((item) => <NavItem title={item.name} />)}
+                                    </div>
+
+                                </Popover.Panel>
+                            </Transition>
+                        </Popover>
+
                     </Popover.Group>
                 </div>
 

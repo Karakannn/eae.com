@@ -1,0 +1,273 @@
+
+/* .custom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid;
+  transition: $transition;
+  font-weight: $font-regular;
+  cursor: pointer;
+  height: max-content;
+
+
+  &.xxl {
+    font: $text-xl;
+    font-weight: $font-semibold;
+    padding: 16px 28px;
+    gap: 8px;
+    box-shadow: $shadow-xs;
+    white-space: nowrap;
+
+    .icon {
+      width: 16px;
+      min-width: 16px;
+      max-height: 16px;
+      stroke: currentColor;
+    }
+  }
+
+  &.xl {
+    font: $text-md;
+    font-weight: $font-semibold;
+    padding: 12px 20px;
+    gap: 8px;
+    box-shadow: $shadow-xs;
+    white-space: nowrap;
+
+    .icon {
+      width: 16px;
+      min-width: 16px;
+      max-height: 16px;
+      stroke: currentColor;
+    }
+  }
+
+  &.lg {
+    font: $text-md;
+    font-weight: $font-semibold;
+    padding: 10px 18px;
+    gap: 8px;
+    box-shadow: $shadow-xs;
+    white-space: nowrap;
+
+    .icon {
+      width: 16px;
+      min-width: 16px;
+      max-height: 16px;
+      stroke: currentColor;
+    }
+  }
+
+  &.md {
+    padding: 10px 16px;
+    box-shadow: $shadow-xs;
+    gap: 8px;
+    font: $text-sm;
+    font-weight: $font-semibold;
+    white-space: nowrap;
+
+    span {
+      font: $text-sm;
+      font-weight: $font-semibold;
+    }
+
+    .icon {
+      width: 20px;
+      min-width: 20px;
+      max-height: 20px;
+      fill: currentColor;
+      stroke: currentColor;
+    }
+  }
+
+  &.sm {
+    font: $text-sm;
+    font-weight: $font-semibold;
+    box-shadow: $shadow-xs;
+    padding: 8px 14px;
+    gap: 8px;
+    white-space: nowrap;
+
+    .icon {
+      width: 16px;
+      min-width: 16px;
+      max-height: 16px;
+      stroke: currentColor;
+    }
+  }
+
+
+  &.standard {
+    &.primary {
+      color: $base-white;
+      background: $primary-600;
+      border: 1px solid $primary-600;
+
+      &:hover {
+        background: $primary-700;
+        border: 1px solid $primary-700;
+      }
+
+      &:active {
+        background: $primary-600;
+        border: 1px solid $primary-600;
+        box-shadow: $shadow-xs $primary-100;
+      }
+
+      &:disabled {
+        background: $primary-200;
+        border: 1px solid $primary-200;
+      }
+    }
+
+    &.secondary {
+      color: $gray-700;
+      border: 1px solid $gray-300;
+      background: $base-white;
+
+      &:hover {
+        border: 1px solid $gray-300;
+        background: $gray-50;
+      }
+
+      &:active {
+        border: 1px solid $gray-300;
+        background: $base-white;
+        box-shadow: $shadow-xs $gray-100;
+      }
+
+      &:disabled {
+        cursor: default;
+        border: 1px solid $gray-200;
+        color: $gray-400;
+        background: $base-white;
+
+        .icon {
+          stroke: $gray-400;
+        }
+      }
+    }
+
+    &.secondary-colored {
+      color: $primary-700;
+      border: 1px solid $primary-50;
+      background: $primary-50;
+
+      &:hover {
+        border: 1px solid $primary-100;
+        background: $primary-100;
+      }
+
+      &:active {
+        border: 1px solid $primary-50;
+        background: $primary-50;
+        box-shadow: $shadow-xs $primary-100;
+      }
+
+      &:disabled {
+        cursor: default;
+        border: 1px solid $primary-25;
+        color: $primary-300;
+        background: $primary-25;
+
+        .icon {
+          stroke: $primary-300;
+        }
+      }
+    }
+
+    &.link {
+      color: $gray-600;
+      padding: 0;
+      border: none;
+
+      &:hover {
+        color: $gray-700;
+      }
+
+      &:active {
+        color: $gray-600;
+      }
+
+      &:disabled {
+        cursor: default;
+        color: $gray-300;
+      }
+    }
+
+    &.link-colored {
+      background: none;
+      color: $primary-700;
+      padding: 0;
+      border: none;
+
+      &:hover {
+        color: $primary-800;
+      }
+
+      &:active {
+        color: $primary-700;
+      }
+
+      &:disabled {
+        cursor: default;
+        color: $gray-300;
+      }
+    }
+  }
+
+  
+  &.circle {
+    border-radius: 50%;
+
+    &.xxl {
+      width: 56px;
+      height: 56px;
+    }
+
+    &.xl {
+      width: 48px;
+      height: 48px;
+    }
+
+    &.lg {
+      width: 44px;
+      height: 44px;
+    }
+
+    &.md {
+      width: 40px;
+      height: 40px;
+    }
+
+    &.sm {
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &.square {
+    border-radius: 6px;
+
+    &.lg {
+      min-height: 40px;
+      max-width: 40px;
+
+      .icon {
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &.md {
+      max-height: 44px;
+      max-width: 44px;
+    }
+
+    &.sm {
+      min-height: 24px;
+      max-width: 24px;
+    }
+  }
+} */
