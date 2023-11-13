@@ -1,10 +1,11 @@
-import Header from '@components//Page/Header/Index'
-import React from 'react'
+import Header from '@components//Page/Header'
+import HomeSlider from '@components//Page/Slider'
 
 export default function Home() {
   return (
     <div>
-      <Header />
+{/*       <Header /> */}
+      <HomeSlider/>
     </div>
   )
 }
