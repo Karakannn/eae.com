@@ -1,6 +1,12 @@
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
+import slide1 from '@assets/dummy/slide1.mp4';
+import slide2 from '@assets/dummy/slide2.mp4';
+import slide3 from '@assets/dummy/slide3.mp4';
+import slide4 from '@assets/dummy/slide4.jpg';
+import slide5 from '@assets/dummy/slide5.mp4';
 
 export default function HomeSlider() {
 
@@ -12,31 +18,57 @@ export default function HomeSlider() {
         slidesToScroll: 1
     };
 
-   
-
     return (
-        <div>
-            <h2> Single Item</h2>
-            <Slider {...settings}>
-                <div>
-                    <h3>1</h3>
+        <Slider className="max-w-7xl pt-4 mx-auto rounded-md overflow-hidden" {...settings}>
+            <section className="relative h-[560px]">
+                <video className="min-w-full min-h-full absolute object-cover" src={slide1} autoPlay muted loop></video>
+                <div className="z-50">
+                    <h1 className="text-lg text-white">Etkileşimli Web Sitemiz Yayında</h1>
+                    <h3 className="text-lg text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad ut, eius alias earum eum possimus quam hic. Officiis, iusto animi.</h3>
+
+                    <div className="flex gap-4">
+                        
+                    </div>
                 </div>
-                <div>
-                    <h3>2</h3>
+            </section>
+          
+
+            <section className="relative h-[560px]">
+                <video className="min-w-full min-h-full absolute object-cover" src={slide2} autoPlay muted loop></video>
+                <div className="z-50">
+                    <h1 className="text-lg text-white">full Hero Video</h1>
+                    <h3 className="text-lg text-white">with TailwindCSS</h3>
                 </div>
-                <div>
-                    <h3>3</h3>
+            </section>
+
+
+            <section className="relative h-[560px]">
+                <video className="min-w-full min-h-full absolute object-cover" src={slide3} autoPlay muted loop></video>
+                <div className="z-50">
+                    <h1 className="text-lg text-white">full Hero Video</h1>
+                    <h3 className="text-lg text-white">with TailwindCSS</h3>
                 </div>
-                <div>
-                    <h3>4</h3>
+            </section>
+
+            <section className="relative h-[560px]">
+
+                <img src={slide4} className="min-w-full min-h-full absolute object-cover" alt="" />
+
+                <div className="z-50">
+                    <h1 className="text-lg text-white">full Hero Video</h1>
+                    <h3 className="text-lg text-white">with TailwindCSS</h3>
                 </div>
-                <div>
-                    <h3>5</h3>
+            </section>
+
+            <section className="relative h-[560px]">
+                <video className="min-w-full min-h-full absolute object-cover" src={slide5} autoPlay muted loop></video>
+                <div className="z-50">
+                    <h1 className="text-lg text-white">full Hero Video</h1>
+                    <h3 className="text-lg text-white">with TailwindCSS</h3>
                 </div>
-                <div>
-                    <h3>6</h3>
-                </div>
-            </Slider>
-        </div>
+            </section>
+
+          
+        </Slider>
     )
 }

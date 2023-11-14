@@ -6,7 +6,85 @@
 
 @layer base {
     html {
-        font-family: 'Roboto', sans-serif;  
+        font-family: 'Roboto', sans-serif;
     }
 }
 
+
+@layer components {
+
+    .custom-btn {
+        @apply flex items-center justify-center rounded-md transition-all cursor-pointer h-max shadow-sm font-semibold whitespace-nowrap
+    }
+
+    .btn-xxl {
+        @apply custom-btn text-xl px-[26px] py-[16px] gap-2
+    }
+
+    .btn-xl {
+        @apply custom-btn text-lg px-[20px] py-[12px] gap-2
+    }
+    .btn-lg {
+        @apply custom-btn text-sm px-[18px] py-[10px] gap-2
+    }
+
+    .btn-md {
+        @apply custom-btn text-sm px-[16px] py-[10px] gap-2
+    }
+
+    .btn-sm {
+        @apply custom-btn text-sm px-[14px] py-2 gap-2
+    }
+
+
+    /* Button Icons */
+    .button-icon {
+        @apply stroke-current
+    }
+
+    .btn-xxl  .button-icon {
+        @apply w-6 h-6 
+    }
+
+    .btn-sm, .btn-xl, .btn-lg, .btn-md .button-icon {
+        @apply  w-5 h-5 min-w-[20px]
+    }
+  
+    .btn-standard-primary {
+        @apply text-white bg-primary-600 border border-primary-600
+        hover:bg-primary-700
+        active:bg-primary-600 active:shadow-sm
+        disabled:bg-primary-200
+    }
+
+    .btn-standard-secondary {
+        @apply text-gray-700 bg-white border border-gray-300
+        hover:bg-gray-100
+        focus:shadow-[0_0px_0px_4px_#F2F4F7,0_1px_1px_0px_rgb(16,24,40,0.05)]
+        active:shadow-sm
+        disabled:cursor-default disabled:border-gray-200 disabled:text-gray-400 disabled:bg-white
+    }
+
+    .btn-standard-secondary-colored {
+        @apply text-primary-700 bg-primary-50 border border-primary-50
+        focus:shadow-[0_0px_0px_4px_#F4EBFF,0_1px_1px_0px_rgb(16,24,40,0.05)]
+        hover:bg-primary-100 hover:border-primary-100
+        active:border-primary-50 hover:bg-primary-100
+        disabled:cursor-default disabled:border-primary-25 bg-primary-50 shadow-sm
+    }
+
+    .btn-standard-link {
+        @apply text-gray-600 bg-none p-0 border-none
+        hover:text-gray-700 hover:underline
+        active:text-gray-600
+        disabled:cursor-default disabled:text-gray-300
+    }
+
+    .btn-standard-link-colored {
+        @apply text-primary-700 bg-none p-0 border-none
+        hover:text-primary-800 hover:underline
+        active:text-primary-700
+        disabled:cursor-default disabled:text-gray-300
+    }
+
+}

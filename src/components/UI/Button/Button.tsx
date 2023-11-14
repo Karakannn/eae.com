@@ -4,7 +4,7 @@ import "./Button.scss";
 type ButtonProps = {
   class: string;
   children?: any;
-  iconId?: string;
+  iconLeft?: string;
   iconRight?: string;
   disabled?: boolean;
 };
@@ -12,10 +12,10 @@ type ButtonProps = {
 export default function Button(props: ButtonProps) {
 
   return (
-    <button type="button" disabled={props.disabled} className={`custom-button ${props.class}`}>
-      {props.iconId && <Icon id={props.iconId} />}
+    <button type="button" disabled={props.disabled || false} className={`${props.class}`}>
+      {props.iconLeft && <Icon class="button-icon" id={props.iconLeft} />}
       {props.children}
-      {props.iconRight && <Icon id={props.iconRight} />}
+      {props.iconRight && <Icon class="button-icon" id={props.iconRight} />}
 
     </button>
   );
