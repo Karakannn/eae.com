@@ -1,13 +1,23 @@
 import Header from '@components//Page/Header'
-import HomeSlider from '@components//Page/Slider'
-import Button from '@components//UI/Button/Button'
+import HomeSlider from './components/HomeSlider'
+import Products from './components/Products'
+import BIMSolutions from './components/BIMSolutions'
+import InteractiveWebsite from './components/InteractiveWebsite'
+import Sellers from './components/Sellers'
+import 'react-tooltip/dist/react-tooltip.css'
+import HomeBlog from './components/HomeBlog'
+
 
 export default function Home() {
   return (
-    <div>
-    {/*   <Header />
-      <HomeSlider/> */}
-      <Button iconLeft='search' iconRight='search' class='btn-md btn-standard-link-colored'>Button CTA</Button>
+    <div className='bg-gray-50'>
+      <Header />
+      <HomeSlider />
+      <Products/>
+      <BIMSolutions/>
+      <InteractiveWebsite/>
+      <Sellers/>
+      <HomeBlog/>
     </div>
   )
 }

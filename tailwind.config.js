@@ -7,6 +7,11 @@ export default {
   ],
   theme: {
     extend: {
+
+      animation: {
+        'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.1, 1) infinite',
+      },
+
       colors: {
         gray: {
           25: '#FCFCFD',

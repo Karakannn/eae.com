@@ -4,57 +4,140 @@
 @tailwind components;
 @tailwind utilities;
 
+.slick-dots {
+    top: 90% ;
+    display: flex !important;
+    justify-content: center;
+}
+
+.slick-dots li  {
+    font-size: 20px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+}
+
+.slick-dots li button:before {
+    color: white;
+    opacity: 0.5;
+}
+.slick-dots li.slick-active button:before {
+    color: white;
+    opacity: 1;
+}
+.slick-prev {
+    z-index: 20;
+    left: 16px;
+    transform: translateX(50%);
+}
+
+.slick-prev:before, .slick-next:before {
+    transition: 0.2s all ease-in-out;
+    font-size: 28px;
+}
+
+.slick-next {
+    z-index: 20;
+    right: 16px;
+    transform: translateX(-50%);
+
+}
+
+
+
 @layer base {
     html {
         font-family: 'Roboto', sans-serif;
     }
+
+    .tooltip {
+        color: #ff6e00 !important;
+        background-color: orange !important;
+      }
 }
 
 
 @layer components {
 
+    /* Page Padding */
+    .page-padding {
+        @apply px-8 sm:px-4
+    }
+
+    .page-vertical-padding {
+        @apply py-24
+    }
+
+    /* Heading */
+    .heading-and-text-sm {
+        @apply flex flex-col gap-2
+    }
+
+    .heading-and-text-md {
+        @apply flex flex-col gap-3
+    }
+
+    .heading-and-text-lg {
+        @apply flex flex-col gap-6
+    }
+
     .custom-btn {
-        @apply flex items-center justify-center rounded-md transition-all cursor-pointer h-max shadow-sm font-semibold whitespace-nowrap
+        @apply flex items-center justify-center rounded-md transition-all cursor-pointer h-max shadow-sm font-semibold whitespace-nowrap w-auto;
     }
 
-    .btn-xxl {
-        @apply custom-btn text-xl px-[26px] py-[16px] gap-2
+ 
+
+    /* Button Sizes */
+    .custom-btn-xxl {
+        @apply custom-btn text-xl px-[26px] py-[16px] gap-2;
     }
 
-    .btn-xl {
-        @apply custom-btn text-lg px-[20px] py-[12px] gap-2
+    .custom-btn-xl {
+        @apply custom-btn text-lg px-[20px] py-[12px] gap-2;
     }
-    .btn-lg {
-        @apply custom-btn text-sm px-[18px] py-[10px] gap-2
-    }
-
-    .btn-md {
-        @apply custom-btn text-sm px-[16px] py-[10px] gap-2
+    .custom-btn-lg {
+        @apply custom-btn text-fontSize-md-0  px-[18px] py-[10px] gap-2;
     }
 
-    .btn-sm {
-        @apply custom-btn text-sm px-[14px] py-2 gap-2
+    .custom-btn-md {
+        @apply custom-btn text-sm px-[16px] py-[10px] gap-2;
+    }
+
+    .custom-btn-sm {
+        @apply custom-btn text-sm px-[14px] py-2 gap-2;
     }
 
 
     /* Button Icons */
     .button-icon {
-        @apply stroke-current
+        @apply stroke-current;
     }
 
-    .btn-xxl  .button-icon {
-        @apply w-6 h-6 
+    .custom-btn-xxl  .button-icon {
+        @apply w-6 h-6 ;
     }
 
-    .btn-sm, .btn-xl, .btn-lg, .btn-md .button-icon {
-        @apply  w-5 h-5 min-w-[20px]
+    .custom-btn-sm .button-icon {
+        @apply  w-5 h-5 min-w-[20px];
     }
+
+    .custom-btn-xl .button-icon {
+        @apply  w-5 h-5 min-w-[20px];
+    } 
+    .custom-btn-lg .button-icon {
+        @apply  w-5 h-5 min-w-[20px];
+    } 
+    .custom-btn-md .button-icon {
+        @apply  w-5 h-5 min-w-[20px];
+    } 
+    
   
     .btn-standard-primary {
         @apply text-white bg-primary-600 border border-primary-600
         hover:bg-primary-700
         active:bg-primary-600 active:shadow-sm
-        disabled:bg-primary-200
+        disabled:bg-primary-200;
     }
 
     .btn-standard-secondary {
@@ -62,7 +145,7 @@
         hover:bg-gray-100
         focus:shadow-[0_0px_0px_4px_#F2F4F7,0_1px_1px_0px_rgb(16,24,40,0.05)]
         active:shadow-sm
-        disabled:cursor-default disabled:border-gray-200 disabled:text-gray-400 disabled:bg-white
+        disabled:cursor-default disabled:border-gray-200 disabled:text-gray-400 disabled:bg-white;
     }
 
     .btn-standard-secondary-colored {
@@ -70,21 +153,21 @@
         focus:shadow-[0_0px_0px_4px_#F4EBFF,0_1px_1px_0px_rgb(16,24,40,0.05)]
         hover:bg-primary-100 hover:border-primary-100
         active:border-primary-50 hover:bg-primary-100
-        disabled:cursor-default disabled:border-primary-25 bg-primary-50 shadow-sm
+        disabled:cursor-default disabled:border-primary-25 bg-primary-50 shadow-sm;
     }
 
     .btn-standard-link {
         @apply text-gray-600 bg-none p-0 border-none
         hover:text-gray-700 hover:underline
         active:text-gray-600
-        disabled:cursor-default disabled:text-gray-300
+        disabled:cursor-default disabled:text-gray-300;
     }
 
     .btn-standard-link-colored {
         @apply text-primary-700 bg-none p-0 border-none
         hover:text-primary-800 hover:underline
         active:text-primary-700
-        disabled:cursor-default disabled:text-gray-300
+        disabled:cursor-default disabled:text-gray-300;
     }
 
 }

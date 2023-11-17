@@ -75,7 +75,7 @@ export default function Header() {
 
     return (
         <header className="bg-white border-2 border-b-gray-300">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between p-2 lg:px-8 relative" aria-label="Global">
+            <nav className="mx-auto flex items-center justify-between p-2 lg:px-8 xl:px-7 relative" aria-label="Global">
 
                 {/* Left Area */}
                 <div className='flex gap-10 items-center'>
@@ -114,7 +114,7 @@ export default function Header() {
                                 leaveFrom="opacity-100 translate-y-0"
                                 leaveTo="opacity-0 translate-y-1"
                             >
-                                <Popover.Panel className="absolute w-full left-0 top-full z-10 mt-1 rounded-md lg:px-8">
+                                <Popover.Panel className="absolute w-full left-0 top-full z-10 mt-1 rounded-md lg:px-8 xl:px-6">
                                     <Products />
                                 </Popover.Panel>
                             </Transition>
@@ -137,7 +137,7 @@ export default function Header() {
                                 leaveFrom="opacity-100 translate-y-0"
                                 leaveTo="opacity-0 translate-y-1"
                             >
-                                <Popover.Panel className="absolute w-full left-0 top-full z-10 mt-1 rounded-md lg:px-8">
+                                <Popover.Panel className="absolute w-full left-0 top-full z-10 mt-1 rounded-md lg:px-8 xl:px-6">
                                     <Solutions />
                                 </Popover.Panel>
                             </Transition>
@@ -214,7 +214,7 @@ export default function Header() {
                                 leaveFrom="opacity-100 translate-y-0"
                                 leaveTo="opacity-0 translate-y-1"
                             >
-                                <Popover.Panel className="absolute w-full left-0 top-full z-10 mt-1 rounded-md lg:px-8">
+                                <Popover.Panel className="absolute w-full left-0 top-full z-10 mt-1 rounded-md lg:px-8 xl:px-6">
                                     <CoorporateHeader />
                                 </Popover.Panel>
                             </Transition>

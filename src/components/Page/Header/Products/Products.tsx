@@ -22,7 +22,7 @@ export default function Products() {
     ]
 
     return (
-        <div className="flex bg-gray-50  shadow-lg ring-1 ring-gray-900/5">
+        <div className="flex bg-gray-50 shadow-lg ring-1 ring-gray-900/5">
             <Tab.Group>
                 <Tab.List className="space-x-1 rounded-md p-1 border-r-2 p-6">
                     <h5 className='text-md font-medium text-primary-600 pb-3'>Ürünlerimiz</h5>
