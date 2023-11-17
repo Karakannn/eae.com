@@ -6,6 +6,7 @@ import InteractiveWebsite from './components/InteractiveWebsite'
 import Sellers from './components/Sellers'
 import 'react-tooltip/dist/react-tooltip.css'
 import HomeBlog from './components/HomeBlog'
+import Footer from '@components//Page/Footer/Footer'
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <InteractiveWebsite/>
       <Sellers/>
       <HomeBlog/>
+      <Footer/>
     </div>
   )
 }
